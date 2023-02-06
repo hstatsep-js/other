@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles -->
+    <style>
+      /*
+      =============== 
+      Fonts
+      ===============
+      */
+      @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+      /*
+      =============== 
+      Variables
+      ===============
+      */
+
+      :root {
+        /* dark shades of primary color*/
+        --clr-primary-1: hsl(205, 86%, 17%);
+        --clr-primary-2: hsl(205, 77%, 27%);
+        --clr-primary-3: hsl(205, 72%, 37%);
+        --clr-primary-4: hsl(205, 63%, 48%);
+        /* primary/main color */
+        --clr-primary-5: hsl(205, 78%, 60%);
+        /* lighter shades of primary color */
+        --clr-primary-6: hsl(205, 89%, 70%);
+        --clr-primary-7: hsl(205, 90%, 76%);
+        --clr-primary-8: hsl(205, 86%, 81%);
+        --clr-primary-9: hsl(205, 90%, 88%);
+        --clr-primary-10: hsl(205, 100%, 96%);
+        /* darkest grey - used for headings */
+        --clr-grey-1: hsl(209, 61%, 16%);
+        --clr-grey-2: hsl(211, 39%, 23%);
+        --clr-grey-3: hsl(209, 34%, 30%);
+        --clr-grey-4: hsl(209, 28%, 39%);
+        /* grey used for paragraphs */
+        --clr-grey-5: hsl(210, 22%, 49%);
+        --clr-grey-6: hsl(209, 23%, 60%);
+        --clr-grey-7: hsl(211, 27%, 70%);
+        --clr-grey-8: hsl(210, 31%, 80%);
+        --clr-grey-9: hsl(212, 33%, 89%);
+        --clr-grey-10: hsl(210, 36%, 96%);
+        --clr-white: #fff;
+        --clr-red-dark: hsl(360, 67%, 44%);
+        --clr-red-light: hsl(360, 71%, 66%);
+        --clr-green-dark: hsl(125, 67%, 44%);
+        --clr-green-light: hsl(125, 71%, 66%);
+        --clr-black: #222;
+        --ff-primary: "Roboto", sans-serif;
+        --ff-secondary: "Open Sans", sans-serif;
+        --transition: all 0.3s linear;
+        --spacing: 0.1rem;
+        --radius: 0.25rem;
+        --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        --max-width: 1170px;
+        --fixed-width: 620px;
+      }
+      /*
+      =============== 
+      Global Styles
+      ===============
+      */
+
+      *,
+      ::after,
+      ::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: var(--ff-secondary);
+        background: var(--clr-grey-10);
+        color: var(--clr-grey-1);
+        line-height: 1.5;
+        font-size: 0.875rem;
+      }
+      ul {
+        list-style-type: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        letter-spacing: var(--spacing);
+        text-transform: capitalize;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+        font-family: var(--ff-primary);
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+      }
+      h4 {
+        font-size: 0.875rem;
+      }
+      p {
+        margin-bottom: 1.25rem;
+        color: var(--clr-grey-5);
+      }
+      @media screen and (min-width: 800px) {
+        h1 {
+          font-size: 4rem;
+        }
+        h2 {
+          font-size: 2.5rem;
+        }
+        h3 {
+          font-size: 1.75rem;
+        }
+        h4 {
+          font-size: 1rem;
+        }
+        body {
+          font-size: 1rem;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+          line-height: 1;
+        }
+      }
+      /*  global classes */
+
+      /* section */
+      .section {
+        padding: 5rem 0;
+      }
+
+      .section-center {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1170px;
+      }
+      @media screen and (min-width: 992px) {
+        .section-center {
+          width: 95vw;
+        }
+      }
+      main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      /*
+      =============== 
+      Reviews
+      ===============
+      */
+      main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .underline {
+        height: 0.25rem;
+        width: 5rem;
+        background: var(--clr-primary-5);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .container {
+        width: 80vw;
+        max-width: var(--fixed-width);
+      }
+      .review {
+        background: var(--clr-white);
+        padding: 1.5rem 2rem;
+        border-radius: var(--radius);
+        box-shadow: var(--light-shadow);
+        transition: var(--transition);
+        text-align: center;
+      }
+      .review:hover {
+        box-shadow: var(--dark-shadow);
+      }
+      .img-container {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+      }
+      #person-img {
+        width: 100%;
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+      }
+      .img-container::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f10e";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        transform: translateY(25%);
+        background: var(--clr-primary-5);
+        color: var(--clr-white);
+      }
+      .img-container::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--clr-primary-5);
+        position: absolute;
+        top: -0.25rem;
+        right: -0.5rem;
+        border-radius: 50%;
+      }
+      #author {
+        margin-bottom: 0.25rem;
+      }
+      #job {
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        color: var(--clr-primary-5);
+        font-size: 0.85rem;
+      }
+      #info {
+        margin-bottom: 0.75rem;
+      }
+      .prev-btn,
+      .next-btn {
+        color: var(--clr-primary-7);
+        font-size: 1.25rem;
+        background: transparent;
+        border-color: transparent;
+        margin: 0 0.5rem;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+      .prev-btn:hover,
+      .next-btn:hover {
+        color: var(--clr-primary-5);
+      }
+      .random-btn {
+        margin-top: 0.5rem;
+        background: var(--clr-primary-10);
+        color: var(--clr-primary-5);
+        padding: 0.25rem 0.5rem;
+        text-transform: capitalize;
+        border-radius: var(--radius);
+        transition: var(--transition);
+        border-color: var(--clr-primary-5);
+        cursor: pointer;
+      }
+      .random-btn:hover {
+        background: var(--clr-primary-5);
+        color: var(--clr-primary-1);
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <!-- title -->
+        <div class="title">
+          <h2>our reviews</h2>
+          <div class="underline"></div>
+        </div>
+        <!-- review -->
+        <article class="review">
+          <div class="img-container">
+            <img src="https://i.imgur.com/IPjGMU7.jpg" id="person-img" alt="" />
+          </div>
+          <h4 id="author">sara jones</h4>
+          <p id="job">ux designer</p>
+          <p id="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+            Iste, doloremque nihil?
+          </p>
+          <!-- prev next buttons-->
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <!-- random button -->
+          <button class="random-btn">surprise me</button>
+        </article>
+      </section>
+    </main>
+    <!-- javascript -->
+    <script>
+      const _0x2cdb=['the\x20boss','job','.random-btn','.prev-btn','DOMContentLoaded','web\x20developer','https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg','874014NXvVvw','I\x27m\x20baby\x20meggings\x20twee\x20health\x20goth\x20+1.\x20Bicycle\x20rights\x20tumeric\x20chartreuse\x20before\x20they\x20sold\x20out\x20chambray\x20pop-up.\x20Shaman\x20humblebrag\x20pickled\x20coloring\x20book\x20salvia\x20hoodie,\x20cold-pressed\x20four\x20dollar\x20toast\x20everyday\x20carry','floor','intern','25996BDPTgP','90URHMni','info','susan\x20smith','1362417zuuMhX','textContent','Helvetica\x20artisan\x20kinfolk\x20thundercats\x20lumbersexual\x20blue\x20bottle.\x20Disrupt\x20glossier\x20gastropub\x20deep\x20v\x20vice\x20franzen\x20hell\x20of\x20brooklyn\x20twee\x20enamel\x20pin\x20fashion\x20axe.photo\x20booth\x20jean\x20shorts\x20artisan\x20narwhal.','48VODDxx','click','img','Sriracha\x20literally\x20flexitarian\x20irony,\x20vape\x20marfa\x20unicorn.\x20Glossier\x20tattooed\x208-bit,\x20fixie\x20waistcoat\x20offal\x20activated\x20charcoal\x20slow-carb\x20marfa\x20hell\x20of\x20pabst\x20raclette\x20post-ironic\x20jianbing\x20swag.','random','64vIDxuG','text','getElementById','16399YxULpA','bill\x20anderson','7933hyfTnM','1144909DbxWgG','person-img','length','name','1132355WhhZoy','https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg','Edison\x20bulb\x20put\x20a\x20bird\x20on\x20it\x20humblebrag,\x20marfa\x20pok\x20pok\x20heirloom\x20fashion\x20axe\x20cray\x20stumptown\x20venmo\x20actually\x20seitan.\x20VHS\x20farm-to-table\x20schlitz,\x20edison\x20bulb\x20pop-up\x203\x20wolf\x20moon\x20tote\x20bag\x20street\x20art\x20shabby\x20chic.\x20','https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg','addEventListener','querySelector','src'];const _0x4601=function(_0x4394a7,_0x328cc2){_0x4394a7=_0x4394a7-0xa6;let _0x2cdb5d=_0x2cdb[_0x4394a7];return _0x2cdb5d;};const _0xaeb839=_0x4601;(function(_0x5b4888,_0x4b0d9f){const _0x255f3a=_0x4601;while(!![]){try{const _0xfc85fe=parseInt(_0x255f3a(0xac))+-parseInt(_0x255f3a(0xc6))+parseInt(_0x255f3a(0xbe))+-parseInt(_0x255f3a(0xab))*parseInt(_0x255f3a(0xc3))+parseInt(_0x255f3a(0xb0))+parseInt(_0x255f3a(0xa6))*parseInt(_0x255f3a(0xa9))+-parseInt(_0x255f3a(0xc9))*parseInt(_0x255f3a(0xc2));if(_0xfc85fe===_0x4b0d9f)break;else _0x5b4888['push'](_0x5b4888['shift']());}catch(_0x384e10){_0x5b4888['push'](_0x5b4888['shift']());}}}(_0x2cdb,0xd604b));const reviews=[{'id':0x1,'name':_0xaeb839(0xc5),'job':_0xaeb839(0xbc),'img':_0xaeb839(0xb1),'text':_0xaeb839(0xbf)},{'id':0x2,'name':'anna\x20johnson','job':'web\x20designer','img':_0xaeb839(0xb3),'text':_0xaeb839(0xc8)},{'id':0x3,'name':'peter\x20jones','job':_0xaeb839(0xc1),'img':_0xaeb839(0xbd),'text':_0xaeb839(0xcc)},{'id':0x4,'name':_0xaeb839(0xaa),'job':_0xaeb839(0xb7),'img':'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg','text':_0xaeb839(0xb2)}],img=document[_0xaeb839(0xa8)](_0xaeb839(0xad)),author=document[_0xaeb839(0xa8)]('author'),job=document[_0xaeb839(0xa8)]('job'),info=document[_0xaeb839(0xa8)](_0xaeb839(0xc4)),prevBtn=document[_0xaeb839(0xb5)](_0xaeb839(0xba)),nextBtn=document[_0xaeb839(0xb5)]('.next-btn'),randomBtn=document[_0xaeb839(0xb5)](_0xaeb839(0xb9));let currentItem=0x0;window[_0xaeb839(0xb4)](_0xaeb839(0xbb),function(){const _0x2013bb=_0xaeb839,_0x18ef93=reviews[currentItem];img['src']=_0x18ef93[_0x2013bb(0xcb)],author[_0x2013bb(0xc7)]=_0x18ef93[_0x2013bb(0xaf)],job['textContent']=_0x18ef93[_0x2013bb(0xb8)],info[_0x2013bb(0xc7)]=_0x18ef93[_0x2013bb(0xa7)];});function showPerson(_0x288ae5){const _0x2e8949=_0xaeb839,_0x4bdcb4=reviews[_0x288ae5];img[_0x2e8949(0xb6)]=_0x4bdcb4[_0x2e8949(0xcb)],author[_0x2e8949(0xc7)]=_0x4bdcb4[_0x2e8949(0xaf)],job['textContent']=_0x4bdcb4[_0x2e8949(0xb8)],info['textContent']=_0x4bdcb4[_0x2e8949(0xa7)];}nextBtn[_0xaeb839(0xb4)](_0xaeb839(0xca),function(){const _0x4e2014=_0xaeb839;currentItem++,currentItem>reviews[_0x4e2014(0xae)]-0x1&&(currentItem=0x0),showPerson(currentItem);}),prevBtn[_0xaeb839(0xb4)]('click',function(){const _0x226b7e=_0xaeb839;currentItem--,currentItem<0x0&&(currentItem=reviews[_0x226b7e(0xae)]-0x1),showPerson(currentItem);}),randomBtn[_0xaeb839(0xb4)]('click',function(){const _0x44b1f7=_0xaeb839;console['log']('hello'),currentItem=Math[_0x44b1f7(0xc0)](Math[_0x44b1f7(0xcd)]()*reviews[_0x44b1f7(0xae)]),showPerson(currentItem);});
+    </script>
+  </body>
+</html>
