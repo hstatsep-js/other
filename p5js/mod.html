@@ -25,6 +25,7 @@
             var counter = 0;
             var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
             var lastFrameClicked = 0;
+            var tooFast = false;
             
             function setup() {
               createCanvas(400, 400);
@@ -32,48 +33,67 @@
             }
             
             function draw() {
-              background(220);
-            
-            
-            
-              fill(0);
-              textSize(10);
-              textAlign(LEFT,BASELINE);
-              text("0                     1                        2                         3                   4                   5", 20, 20);
-              textSize(20);
-              text("red , orange , yellow , green , blue , purple", 10, 50);
-              drawArrow(counter%6);
-            
-              text("counter  =>  " + counter, 120, 330);
-            
-              textSize(30);
-              text("counter % 6  =>  " + counter % 6, 70, 375);
-            
-              fill(colors[counter % 6]); // choose the color based on the counter
-              ellipse(width / 2, height / 2, width / 2, height / 2)
+              console.log(tooFast)
               
-              fill(0);
-              textSize(20);
-              text("PRESS ANY KEY!",120,205);
+              if(tooFast){
+                end();
+              } else {
+                
+                background(220);
+            
+            
+            
+                fill(0);
+                textSize(10);
+                textAlign(LEFT,BASELINE);
+                text("0                     1                        2                         3                   4                   5", 20, 20);
+                textSize(20);
+                text("red , orange , yellow , green , blue , purple", 10, 50);
+                drawArrow(counter%6);
+            
+                text("counter  =>  " + counter, 120, 330);
+            
+                textSize(30);
+                text("counter % 6  =>  " + counter % 6, 70, 375);
+            
+                fill(colors[counter % 6]); // choose the color based on the counter
+                ellipse(width / 2, height / 2, width / 2, height / 2)
+            
+                fill(0);
+                textSize(20);
+                text("PRESS ANY KEY!",120,205);
+                
+              }
+              
+              
             
             }
             
             function keyPressed() {
               counter++;
+              console.log("frameCount: " + frameCount)
+              console.log("lastFrameClicked: " + lastFrameClicked)
+              console.log("frameCount - lastFrameClicked: " + (frameCount - lastFrameClicked))
+              console.log("frameCount - lastFrameClicked < 30: " + (frameCount - lastFrameClicked < 30))
+              console.log(" ")
               if(frameCount - lastFrameClicked < 30){
-                noLoop();
-                background(0);
-                textAlign(CENTER,CENTER);
-                fill(255);
-                textSize(40);
-                text("This is not a game.",width/2,100);
-                textSize(14);
-                text("You are pressing keys too fast",width/2,200);
-                text("to actually understand what is happening.",width/2,220);
-                textSize(20);
-                text("Please reload the page and try again.",width/2,300);
+                tooFast = true;
               }
               lastFrameClicked = frameCount;
+            }
+            
+            function end() {
+              noLoop();
+              background(0);
+              textAlign(CENTER,CENTER);
+              fill(255);
+              textSize(40);
+              text("This is not a game.",width/2,100);
+              textSize(14);
+              text("You are pressing keys too fast",width/2,200);
+              text("to actually understand what is happening.",width/2,220);
+              textSize(20);
+              text("Please reload the page and try again.",width/2,300);
             }
             
             function drawArrow(num) {
