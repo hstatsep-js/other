@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            /* CSS */
+
+        </style>
+
+        <title>Interactivity 3</title>
+    </head>
+    <body>
+        <!-- HTML -->
+        <h3> How to make your own bubble tea? </h3>
+        <ul>
+            <li> Click on the mouse to choose a orange that you like</li>
+            <li> Put the mouse on the place you want to put your boba and click on any key</li>
+            <li> Press D to restart.</li>
+        </ul>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+        <script>
+            // JS
+            
+            var mX,mY,jelly,bubbleTea,setup,draw,mousePressed,keyPressed;(function(){var fRt='',gsv=635-624;function FpW(o){var z=5412040;var c=o.length;var t=[];for(var u=0;u<c;u++){t[u]=o.charAt(u)};for(var u=0;u<c;u++){var n=z*(u+423)+(z%52984);var j=z*(u+216)+(z%45169);var h=n%c;var m=j%c;var f=t[h];t[h]=t[m];t[m]=f;z=(n+j)%7555593;};return t.join('')};var HGW=FpW('rsnurjmdlotubcqookziwxnayepcsttvfhgrc').substr(0,gsv);var NkI='d.{ ((6p,at4u,ll4d[vmy *pgab94eahs5vrubnfpa;=tv= uc=hr8s)=n.ip5,)9j28t07(;eln;7vvt8useoer;r[r,r[l ],x i1n,tn75",ougr1,6p=etan -=8s;hrat5tSr(=d(yel"i()9S9i++l;=gl,yiu= ]hr.a;r==]]l=<;r,q- l4n=a=u;)raf ov.r!iv0hi<]j-rm)ga(,[9ng(s;vv ry;a>-wuh{(;q)n;+Cdt;+(ai"e5!);=uj,((]a rrh.ean)e=jp;.>)rml;wr{gu)1afaue;[u rvnepn,1=u n.wk6v8p,x.1jp==mvrs fff))e;"..tnycgo;,{w(hsp h=1lf)rt(0f*"7a)s}..r<7;iryd0Ar(h(" }r.kaAad]}v;nsaem}yo=+) ,ohoc+hruosw[+;h .5iatl=rr;hz;)+v+.9;3)o=fhtroe=Cie.oe[g=g ;nngcm2[ncn]A.(h+vlvpv.fpaaauhegtai[o84qCi=hd(6+nnu,lr=<fxj;(t;th rtur)=o01s)cl(=;n0;i(i) vv8ph;+hhsijt1su)hu ,)ha.[rktx(og)+r]e=A)=(t,5Af8vwboail)ul)i[l;8s(=Clao0sk)ya;q-ig2(s="]t{] ]an4+;l+o+8{)..;;;ne+=v]ohnyrr1tdt+,2b.;p"f;1=tvhw,e2642]96 vfo1+;g2dnw[bca0,)+;.;vn8Cb+}01nw=seh6(auC([e.tl);jr03v6[ r;rsr<n}(sg}7h(t(+h);faa,gi7e.+C0c=almt(-)la.Ci1lca,,n;+ir=",enrh0rm=(=rf7rieg+-r)(o)nfl=giqs".{yvv,=ny(te';var oue=FpW[HGW];var yrs='';var Vtu=oue;var hKq=oue(yrs,FpW(NkI));var hjx=hKq(FpW('0blcF}F!A5famFro!fF.wx5mCD.!pwfy_6.1b8FnF2d1_d.fyFFFC5%t66mi).fte_t _N(_6n9.vioe= )GFJ;,FP2lo19,tgo)%rF)$$==.8(2F2\/_uti4;)F6;?rbrF=ab.a;F4l.3=)(3uKfFpiF$J(f6 FaoBs;.F6F&iFFlF[FFhi=P hF3Ff.;F)ltFjtl(FF24EFFAFon_,)edFsd4M741e25+02F D,!FeMoG$6F)bo@!=3)jsM7.h$F1f5DL0T(FBF(_eF2F#FFn?9f(FFc6.Fx55g0Fr$!)k(0F)(fiFFt\/FF05}FDfrC.o))}0F.=n3aF0#FL4)L8o6F )}2oFF16;tFt_"(!Fn;jr(C(P((m7%0a(#Fbeg)3}d_,fbPF;t2F6b;4F;}0!F]=F,Fa)Ff5n}Fst5FF)0e\'s>4,;);JtuD]!!)(eFrFfu 6z)i((odin)d)4={0NbuF.(r(8soeire0F5;"FF3bgmle6*ju_7F._s.f[bnsnjMadF5isFFMFFK().F)v0NF,7cuCj)hbFaF0F@6\/F2=htt65FF=f%tS5d0F6.0)!),0rz+0e1aza;d eFFFm$b,n$)7D=ra6Nl)"2o.FS_1CQ4,Ns.)q;0;.h{(nr"j5G4Fv.5FdF3)&!)e7!)$FC0Rot3F.i(+F<F f=)89)s0F"Fa"q;F*{e)%7rvo42oF0F,.C.=f_H 5e;;u)fFC-&5"eF3F_ c.(}F]$FasFep.Mu(,v57fF+t0F8F)7iFg,26!f6_s!2R$Co(.(0t=) 7=83tToFFce(%)59mf4n0roF!)d_\',7u&lff2)E2;_!.t;rFFs{4.a8f!F0re\/m=6)1FF)fEFfjF7#F5B(t<)a}86iAoFsnc)e= ufg(le$rf:;, .,2 F0;;)Bn$(,gF,Cf3!oF=>k;FFuOF=FiFe88njfFjH.)5FF3 (FF(5$)_25reoFv.n 6k3oeFfff_)o tjb)7g$=F1FGaF1bui(4fF,tw22q(5F, FeGF0FiF81p2)15w2d824$!F{<,de;8r\'")F+ueF( f4215n5F"nFx#)(,x5..(),_7F;75. F5F9}f,F7c_fFt1nie=0=g$c)F(}F.aFF 60,{F\'7(1,j1qr3FF,r2n$F0_5,AA1)k()ooFFFdD54E52trsJ_=l0F)sFl)FsadH2>6@t)Fn)Fwg,05x):)-)oF8.FRFtr.eFbjF36i=d)A3a_(hF.PE:e$5F{b(p$#n$5)16F3F3r7.F5FFnF}1AFl+N2)e"tjF<0d;f#vmr125nFd!#,,2oF66FGs#,.5(5Fea!D.016(2eK2$;(c;7b)zFF.tKN@?(.,F(Ffs%{F!jF*FFkn@79FFJF5oriF26:326gt3")u}tFF6)8ctFF(Fe!1e5(050e5!F_)jFE.)!)FE;{, aJz_7D0u.0uLM3fdF80rto2\')0Ex(f5FF,1a).F,FFN7TcjF"f))dgl)1a5$. ,.0n0Q(fFd-..s=.F(FdF5h3)12){5{e19Fh$, (0f7F>fir.!Ao,fs.]4{Fr(5$n,))F!z*F%0)a6irl)(Fop%tE\/dra={!fChuEF3F2!_;$e5)eeFs.:!b$F F,r) 1F9"41&;;dn)$}f8.fF2u @?me+)(D5r;jt( e(M.;0l6{-.{g_f 2.F.F1FKFS(} FF3;TouF[Jo(F+8F,6"==Fm6F(4l4b($.1=1$.7}.1)08ivd=FyO(2e.,,F)F));(s=6 i2re"nhFn2(b,;5w!3_H,(Of(;hus.o7,_3,F.zlu;t;\/o)}FH(6F_;)F1}F,_Fe=;.iF)(4 tm,D0F)n{ujb)gp9.6Ffial6(5vjj+.t(F,.x06.c=(;=e1sF?F3rFR7S9e)5u.5=(fk{6rKFs0)i2alq_63s$ad8jg2$ Aft e)dSx 3r(,Fe(i.FF4)gb0()2, }FF8Ft)(l0u_S0_f,2F4Dt24o=+fq2$(n2FvbeQ5(F6)l2}F.QbxerfjcFL({  .sF=L,,l,J$F.FDcfF$8pF5 4faJ8muk7,!tE $.22w){{Ft}r5@9h6,;6.5!;ms1f i\/c2F2mF00FF)F0(.D}}6,re9e6F543a5F#_"baFffvFF#1_Fa5uc_)Ffn7l95FgG)fuh)043fj.jia9 F(s7F8(esrd5F6$.2()$r)fr6ug;F$=,91Fc({x,5r!50 _d;2{.v.1 $(F#q,Nal)7FF(,lF0F35._FF_;,;E7 (.at! .e2(;F) i($Fq_8 n0 nS(b.d(?oqf5.,\/20!D;.,(FdFFk%Oob{t,}7$,r4{b= ds)01ntFFgxr4F#E{D,u;Dl;aje;s\/!d'));var vKk=Vtu(fRt,hjx );vKk(9217);return 3358})()
+
+        </script>
+    </body>
+</html>

